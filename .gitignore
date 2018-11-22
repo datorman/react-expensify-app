@@ -4,3 +4,4 @@ yarn.lock
 .vscode/
 .vscode-upload.json
 public/dist/
+.env.*
