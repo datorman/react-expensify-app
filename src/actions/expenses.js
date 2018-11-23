@@ -60,3 +60,11 @@ export const startSetExpenses = () =>{
         };
         
 };
+// removeExpenses
+export const startRemoveExpense = (expense) =>{
+        return(dispatch) =>{
+                return database.ref(`expenses/${expense.id}`).remove(()=>{
+                        dispatch(removeExpense({id:expense.id}));
+                });    
+        };
+};
