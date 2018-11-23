@@ -68,3 +68,17 @@ export const startRemoveExpense = (expense) =>{
                 });    
         };
 };
+//start edit expense
+export const startEditExpense = (id,updates) =>{
+        return(dispatch) =>{
+                return database.ref(`expenses/${id}`).update({
+                        notes: updates.notes?updates.notes:'',
+                        amount: updates.amount,
+                        createdAt: updates.createdAt,
+                        description: updates.description
+                }).then(()=>{
+                        dispatch(editExpense(id,updates));
+                });
+                
+        };
+};
