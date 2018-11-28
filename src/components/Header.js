@@ -8,7 +8,6 @@ export const Header= ({startLogout}) => (
         <h1>Expensify Project</h1>
         <NavLink to="/dashboard" activeClassName="is-active" exact={true}>Dashboard</NavLink>
         <NavLink to="/create" activeClassName="is-active" >Create Expense</NavLink>
-        <NavLink to="/help" activeClassName="is-active">Help Page</NavLink>
         <button onClick={startLogout}>Logout</button>
     </header>
 );
